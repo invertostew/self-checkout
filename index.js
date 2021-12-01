@@ -1,4 +1,4 @@
-const getItemByBarcode = (items, barcode) => items.find((item) => item.barcode === barcode);
+const getItemByBarcode = (items, barcode) => items.find(item => item.barcode === barcode);
 
 const addItemToBasket = (basket, item) => {
     if (item !== undefined) return basket.push(item);
