@@ -56,7 +56,8 @@ describe('scanItem', () => {
 
 describe('addItem', () => {
     test('add an item to the basket', () => {
-        
+        expect(addItem(basket, items[0])).toContain(orange);
+        expect(addItem(basket, items[0])).toEqual([orange]);
     });
     test('add two items to the basket', () => {
 
