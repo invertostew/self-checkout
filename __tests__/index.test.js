@@ -57,10 +57,10 @@ describe('scanItem', () => {
 describe('addItem', () => {
     test('add an item to the basket', () => {
         expect(addItem(basket, items[0])).toEqual([orange]);
-        expect(addItem(basket, items[1])).toEqual([banana])
     });
     test('add two items to the basket', () => {
-
+        expect(addItem(basket, items[1])).toEqual([pineapple]);
+        expect(addItem(basket, items[4])).toEqual([pineapple, banana]);
     });
 });
 
