@@ -20,7 +20,11 @@ const basketTotal = basket => {
 };
 
 const removeItem = (basket, barcode) => {
+    const itemIndex = basket.findIndex(item => {
+        return item.barcode === barcode;
+    });
 
+    return basket.splice(itemIndex, 1);
 };
 
 module.exports = {

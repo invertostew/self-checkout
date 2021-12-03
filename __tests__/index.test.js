@@ -80,7 +80,7 @@ describe('basketTotal', () => {
 describe('removeItem', () => {
     test('remove an item from the basket', () => {
         basket = [pineapple];
-        expect(removeItem(basket, basket[0])).toEqual([pineapple]);
+        expect(removeItem(basket, basket[0].barcode)).toEqual([pineapple]);
     });
     test('remove two items from the basket', () => {
 
