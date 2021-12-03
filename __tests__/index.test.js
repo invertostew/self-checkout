@@ -84,8 +84,8 @@ describe('removeItem', () => {
     });
     test('remove two items from the basket', () => {
         basket = [pineapple, orange, banana];
-        expect(removeItem(basket, basket[0].barcode)).toEqual([pineapple2]);
-        expect(removeItem(basket, basket[1].barcode)).toEqual([banana2]);
-        expect(basket).toEqual([orange2]);
+        expect(removeItem(basket, basket[0].barcode)).toEqual([pineapple]);
+        expect(removeItem(basket, basket[1].barcode)).toEqual([banana]);
+        expect(basket).toEqual([orange]);
     });
 });
