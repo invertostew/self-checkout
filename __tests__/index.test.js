@@ -48,9 +48,9 @@ beforeEach(() => {
 
 describe('scanItem', () => {
     test('returns an item based on its barcode', () => {
-        expect(scanItem(items[0].barcode)).toBe(orange);
-        expect(scanItem(items[2].barcode)).toBe(kiwi);
-        expect(scanItem(items[4].barcode)).toBe(banana);
+        expect(scanItem(items, items[0].barcode)).toBe(items[0]);
+        expect(scanItem(items, items[2].barcode)).toBe(items[2]);
+        expect(scanItem(items, items[4].barcode)).toBe(items[4]);
     });
 });
 
