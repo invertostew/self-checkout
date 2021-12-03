@@ -67,7 +67,12 @@ describe('addItem', () => {
 describe('basketTotal', () => {
     test('returns the total price of the current basket', () => {
         basket = [pineapple, orange, banana];
-        total = pineapple.price + orange.price + banana.price;
+        const total = pineapple.price + orange.price + banana.price;
+        expect(basketTotal(basket)).toBe(total);
+    });
+    test('returns the total price of the current basket 2', () => {
+        basket = [pineapple, pineapple, orange, banana, kiwi];
+        const total = (pineapple.price * 2) + orange.price + banana.price + kiwi.price;
         expect(basketTotal(basket)).toBe(total);
     });
 });

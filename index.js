@@ -12,7 +12,11 @@ const addItem = (basket, item) => {
 };
 
 const basketTotal = basket => {
+    const total = basket.reduce((accumulator, item) => {
+        return accumulator + item.price;
+    }, 0);
 
+    return total;
 };
 
 const removeItem = (basket, barcode) => {
